@@ -1,0 +1,158 @@
+body {
+    color: #333;
+    font-family: Verdana, sans-serif;
+    margin: 0;
+}
+
+header {
+    text-align: right;
+    padding: 10px;
+    /* CSSで画像を挿入 */
+    background-image: url(./img/header_03.jpg);
+    height: 240px;
+    /* 縦横比を保持したまま画面いっぱいに表示 */
+    background-size: cover;
+    /* 画像の中央を起点にサイズを変化させる */
+    background-position: 50% 50%;
+    margin-bottom: 60px;
+}
+
+header ul {
+    margin: 0;
+    /* 黒丸を消す */
+    list-style-type: none;
+    padding-left: 0;
+}
+
+header li {
+    /* inline-blockでリストを横並びに */
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 16px;
+    text-shadow: 2px 2px 1px #333;
+}
+
+header li > a {
+    text-decoration: none;
+    /* inheritで親要素を引き継ぐ */
+    /* color: inherit; */
+    color: #fffaf0;
+}
+
+header li > a:hover {
+    color: #1e90ff;
+}
+
+.current {
+    border-bottom: 4px solid #1e90ff;
+}
+
+section {
+    text-align: center;
+}
+
+section h1 {
+    font-weight: normal;
+    margin: 8px 0 15px;
+}
+
+section p {
+    margin-top: 0;
+    font-size: 14px;
+}
+
+.profile {
+    /* 画像の境界線を円にする */
+    border-radius: 50%;
+    border: 5px solid #1e90ff;
+    /* borderに影をつける */
+    /* box-shadow: x y blur color */
+    box-shadow: 0 0 5px #888;
+}
+
+.title {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.title h1 {
+    text-align: left;
+    color: gray;
+    border-bottom: 1px solid gray;
+    /* padding-bottomで下線の余白を調整 */
+    padding-bottom: 4px;
+}
+
+.works {
+    /* widthを指定して、文字と画像の幅を統一させる */
+    width: 400px;
+    /* margin autoを使い中央揃えにする */
+    margin: 30px auto;
+    border-bottom: 1px solid gray;
+}
+
+.works img {
+    border: 1px solid lightgray;
+}
+
+.works a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid #333;
+    padding-bottom: 2px;
+}
+
+.works a:hover {
+    color: royalblue;
+    border-bottom: 1px solid royalblue;
+    padding-bottom: 2px;
+}
+
+.works > section {
+    margin-bottom: 40px;
+}
+
+/* 同じ値を複数セレクタに適応する場合は、カンマ区切りで指定可能 */
+.works h1, .works p {
+    text-align: left;
+}
+
+footer {
+    width: 400px;
+    /* ３つ目の引数指定で、下方向に余白 */
+    margin: 0 auto 60px;
+}
+
+footer ul {
+    margin: 0;
+    /* 黒丸を消す */
+    list-style-type: none;
+    padding-left: 0;
+    float: left;
+}
+
+footer li {
+    /* inline-blockでリストを横並びに */
+    display: inline-block;
+    padding: 0 5px 0 0;
+}
+
+footer li > a:hover {
+    /* 透明度を変えてhoverを表現（1で100%） */
+    opacity: 0.6;
+}
+
+footer p {
+    text-align: right;
+    color: lightgray;
+    font-size: 14px;
+}
+
+.about {
+    width: 400px;
+    margin: 0 auto 60px;
+}
+
+.about p {
+    text-align: left;
+}
