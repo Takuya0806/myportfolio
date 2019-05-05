@@ -48,12 +48,14 @@ header li > a:hover {
 }
 
 section {
-    text-align: center;
+    width: 900px;
+    margin: 0 auto;
 }
 
 section h1 {
     font-weight: normal;
     margin: 8px 0 15px;
+    line-height: 1.5em;
 }
 
 section p {
@@ -62,6 +64,10 @@ section p {
 }
 
 .profile {
+    text-align: center;
+}
+
+.icon {
     /* 画像の境界線を円にする */
     border-radius: 50%;
     border: 5px solid #1e90ff;
@@ -70,12 +76,12 @@ section p {
     box-shadow: 0 0 5px #888;
 }
 
-.title {
-    width: 400px;
+.section-title {
+    width: 900px;
     margin: 0 auto;
 }
 
-.title h1 {
+.section-title h1 {
     text-align: left;
     color: gray;
     border-bottom: 1px solid gray;
@@ -84,15 +90,9 @@ section p {
 }
 
 .works {
-    /* widthを指定して、文字と画像の幅を統一させる */
-    width: 400px;
-    /* margin autoを使い中央揃えにする */
     margin: 30px auto;
     border-bottom: 1px solid gray;
-}
-
-.works img {
-    border: 1px solid lightgray;
+    text-align: center;
 }
 
 .works a {
@@ -112,13 +112,26 @@ section p {
     margin-bottom: 40px;
 }
 
-/* 同じ値を複数セレクタに適応する場合は、カンマ区切りで指定可能 */
-.works h1, .works p {
+.work {
+    /* float: left; */
+    display: inline-block;
+    margin: 0 15px 30px;
+}
+
+.work h1 {
+    font-size: 20px;
+}
+
+.work h1, .works p {
     text-align: left;
 }
 
+.work img {
+    border: 1px solid lightgray;
+}
+
 footer {
-    width: 400px;
+    width: 700px;
     /* ３つ目の引数指定で、下方向に余白 */
     margin: 0 auto 60px;
 }
@@ -146,13 +159,4 @@ footer p {
     text-align: right;
     color: lightgray;
     font-size: 14px;
-}
-
-.about {
-    width: 400px;
-    margin: 0 auto 60px;
-}
-
-.about p {
-    text-align: left;
 }
